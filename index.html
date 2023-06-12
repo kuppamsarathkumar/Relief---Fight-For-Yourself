@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diffie-Hellman Key Exchange</title>
+</head>
+<body>
+	<h1>Diffie-Hellman Key Exchange</h1>
+	<form id="dh-form">
+		<label for="p">Public prime modulus (p):</label>
+		<input type="number" id="p" required><br><br>
+		<label for="g">Public base (g):</label>
+		<input type="number" id="g" required><br><br>
+		<label for="a">Secret key (a):</label>
+		<input type="number" id="a" required><br><br>
+		<button type="button" onclick="generatePublicKey()">Generate public key</button>
+		<br><br>
+		<label for="b">Other party's public key (b):</label>
+		<input type="number" id="b" required><br><br>
+		<button type="button" onclick="generateSharedSecret()">Generate shared secret</button>
+		<br><br>
+		<label for="s">Shared secret key (s):</label>
+		<input type="text" id="s" readonly>
+	</form>
+	<script src="dh.js"></script>
+</body>
+</html>
